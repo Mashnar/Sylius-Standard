@@ -13,4 +13,18 @@ use Sylius\Component\Core\Model\ProductTranslation as BaseProductTranslation;
  */
 class ProductTranslation extends BaseProductTranslation
 {
+    /** @ORM\Column(type="string", nullable=true) */
+    private $color;
+
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+
+    public function setColor($color): void
+    {
+        $this->color = $color;
+    }
 }
